@@ -1,0 +1,31 @@
+/* Dark mode styles */
+body.dark-mode {
+    filter: invert(1) hue-rotate(180deg);
+    background-color: #000;
+}
+
+body.dark-mode img,
+body.dark-mode video,
+body.dark-mode iframe {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+/* Exclude header and menu from dark mode */
+body.dark-mode .header,
+body.dark-mode .main-nav,
+body.dark-mode .nav-overlay {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.dark-mode-toggle:hover {
+    opacity: 0.8;
+} 

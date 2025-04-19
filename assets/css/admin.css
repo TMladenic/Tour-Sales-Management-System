@@ -1,0 +1,601 @@
+/* Admin Container */
+.admin-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Form Section */
+.form-section {
+    background: var(--card-background);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.form-section h3 {
+    margin-top: 0;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Admin Form */
+.admin-form {
+    display: grid;
+    gap: 1rem;
+    max-width: 600px;
+}
+
+.form-group {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: var(--input-background);
+    color: var(--input-text);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* List Section */
+.list-section {
+    background: var(--card-background);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+}
+
+.list-section h3 {
+    margin-top: 0;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Admin Table */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background: var(--card-background);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.admin-table th {
+    background-color: var(--table-header);
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.admin-table tr:hover {
+    background-color: var(--table-row-hover);
+}
+
+/* Buttons */
+button[type="submit"],
+.btn-edit,
+.btn-delete {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button[type="submit"] {
+    background-color: var(--button-primary);
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--button-primary-hover);
+}
+
+.btn-edit {
+    background-color: var(--button-success);
+    color: white;
+    margin-right: 0.5rem;
+}
+
+.btn-edit:hover {
+    background-color: var(--button-success-hover);
+}
+
+.btn-delete {
+    background-color: var(--button-danger);
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: var(--button-danger-hover);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background-color: var(--modal-background);
+    margin: 5% auto;
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--modal-border);
+}
+
+.close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.close:hover {
+    color: var(--accent-color);
+}
+
+/* Messages */
+.message {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.message.success {
+    background-color: var(--message-success-bg);
+    color: var(--success-color);
+    border: 1px solid var(--message-success-border);
+}
+
+.message.error {
+    background-color: var(--message-error-bg);
+    color: var(--error-color);
+    border: 1px solid var(--message-error-border);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .admin-container {
+        margin: 1rem auto;
+    }
+
+    .form-section,
+    .list-section {
+        padding: 1rem;
+    }
+
+    .admin-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+
+    .btn-edit,
+    .btn-delete {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Waiting List Styles */
+.waiting-list-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.waiting-list-form {
+    display: grid;
+    gap: 1rem;
+    max-width: 600px;
+}
+
+.waiting-list-form textarea {
+    padding: 0.75rem;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    font-size: 1rem;
+    resize: vertical;
+    background-color: var(--input-background);
+    color: var(--input-text);
+}
+
+.waiting-list-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background: var(--card-background);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.waiting-list-table th,
+.waiting-list-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.waiting-list-table th {
+    background-color: var(--table-header);
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.waiting-list-table tr:hover {
+    background-color: var(--table-row-hover);
+}
+
+.waiting-list-table td:last-child {
+    white-space: nowrap;
+}
+
+/* Responsive Design for Waiting List */
+@media (max-width: 768px) {
+    .waiting-list-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .waiting-list-table th,
+    .waiting-list-table td {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .waiting-list-form {
+        max-width: 100%;
+    }
+} /* Admin Container */
+.admin-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Form Section */
+.form-section {
+    background: var(--card-background);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.form-section h3 {
+    margin-top: 0;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Admin Form */
+.admin-form {
+    display: grid;
+    gap: 1rem;
+    max-width: 600px;
+}
+
+.form-group {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: var(--input-background);
+    color: var(--input-text);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* List Section */
+.list-section {
+    background: var(--card-background);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+}
+
+.list-section h3 {
+    margin-top: 0;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Admin Table */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background: var(--card-background);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.admin-table th {
+    background-color: var(--table-header);
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.admin-table tr:hover {
+    background-color: var(--table-row-hover);
+}
+
+/* Buttons */
+button[type="submit"],
+.btn-edit,
+.btn-delete {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button[type="submit"] {
+    background-color: var(--button-primary);
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--button-primary-hover);
+}
+
+.btn-edit {
+    background-color: var(--button-success);
+    color: white;
+    margin-right: 0.5rem;
+}
+
+.btn-edit:hover {
+    background-color: var(--button-success-hover);
+}
+
+.btn-delete {
+    background-color: var(--button-danger);
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: var(--button-danger-hover);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background-color: var(--modal-background);
+    margin: 5% auto;
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--modal-border);
+}
+
+.close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.close:hover {
+    color: var(--accent-color);
+}
+
+/* Messages */
+.message {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.message.success {
+    background-color: var(--message-success-bg);
+    color: var(--success-color);
+    border: 1px solid var(--message-success-border);
+}
+
+.message.error {
+    background-color: var(--message-error-bg);
+    color: var(--error-color);
+    border: 1px solid var(--message-error-border);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .admin-container {
+        margin: 1rem auto;
+    }
+
+    .form-section,
+    .list-section {
+        padding: 1rem;
+    }
+
+    .admin-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+
+    .btn-edit,
+    .btn-delete {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Waiting List Styles */
+.waiting-list-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.waiting-list-form {
+    display: grid;
+    gap: 1rem;
+    max-width: 600px;
+}
+
+.waiting-list-form textarea {
+    padding: 0.75rem;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    font-size: 1rem;
+    resize: vertical;
+    background-color: var(--input-background);
+    color: var(--input-text);
+}
+
+.waiting-list-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background: var(--card-background);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.waiting-list-table th,
+.waiting-list-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.waiting-list-table th {
+    background-color: var(--table-header);
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.waiting-list-table tr:hover {
+    background-color: var(--table-row-hover);
+}
+
+.waiting-list-table td:last-child {
+    white-space: nowrap;
+}
+
+/* Responsive Design for Waiting List */
+@media (max-width: 768px) {
+    .waiting-list-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .waiting-list-table th,
+    .waiting-list-table td {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .waiting-list-form {
+        max-width: 100%;
+    }
+} 
