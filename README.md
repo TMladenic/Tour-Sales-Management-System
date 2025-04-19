@@ -87,7 +87,6 @@ A comprehensive web-based system for managing tours, sales, expenses, and invest
 
 ## 🔒 Security
 
-- IP-based access control for admin area
 - Secure password hashing
 - SQL injection prevention
 - XSS protection
